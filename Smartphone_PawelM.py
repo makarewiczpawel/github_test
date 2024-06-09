@@ -78,6 +78,10 @@ class App:
 iphone = Smartphone("iPhone", 500)
 iphone.describe_phone()
 
+samsung = Smartphone("Samsung", 800)
+samsung.describe_phone()
+
+
 # Turning on the phone before app installation
 iphone.power('on')
 
@@ -89,6 +93,15 @@ iphone.install_app(facebook)
 iphone.install_app(whatsapp)
 iphone.install_app(messenger)
 iphone.install_app(facebook)  # Próba ponownej instalacji aplikacji
+
+# Turning on the phone before app installation
+samsung.power('on')
+
+# Installing apps on the Samsung phone
+samsung.install_app(facebook)
+samsung.install_app(whatsapp)
+samsung.install_app(messenger)
+print("Installed apps:", samsung.list_installed_apps())
 
 # Wyłączanie telefonu przed próbą odinstalowania aplikacji
 iphone.power('off')
